@@ -1,0 +1,46 @@
+{
+  "name": "@momsfriendlydevco/faxios",
+  "version": "1.0.0",
+  "description": "Very simple utility wrapper to add Axios functionality to Fetch",
+  "scripts": {
+    "lint": "eslint lib"
+  },
+  "keywords": [
+    "fetch",
+    "axios"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./lib/faxios.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MomsFriendlyDevCo/Faxios.git"
+  },
+  "author": "Matt Carter <matt@mfdc.biz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MomsFriendlyDevCo/Faxios/issues"
+  },
+  "homepage": "https://github.com/MomsFriendlyDevCo/Faxios#readme",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "devDependencies": {
+    "@momsfriendlydevco/eslint-config": "^1.0.9",
+    "eslint": "^8.54.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "node": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 13,
+      "sourceType": "module"
+    }
+  }
+}
