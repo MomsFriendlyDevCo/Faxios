@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import faxios, {defaults, getFetchRequest} from '#lib/faxios';
 
-describe('@MomsFriendlyDevCo/Faxios', ()=> {
+describe('AxiosRequest translation', ()=> {
 
 	it('translate basic config structures', ()=> {
 		let data;
