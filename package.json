@@ -1,15 +1,19 @@
 {
   "name": "@momsfriendlydevco/faxios",
   "version": "1.0.0",
-  "description": "Very simple utility wrapper to add Axios functionality to Fetch",
+  "description": "Tiny utility wrapper to add Axios functionality to Fetch",
   "scripts": {
-    "lint": "eslint lib"
+    "lint": "eslint lib",
+    "test": "mocha"
   },
   "keywords": [
     "fetch",
     "axios"
   ],
   "type": "module",
+  "imports": {
+    "#lib/*": "./lib/*.js"
+  },
   "exports": {
     ".": "./lib/faxios.js"
   },
@@ -29,7 +33,9 @@
   },
   "devDependencies": {
     "@momsfriendlydevco/eslint-config": "^1.0.9",
-    "eslint": "^8.54.0"
+    "chai": "^4.3.10",
+    "eslint": "^8.54.0",
+    "mocha": "^10.2.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
