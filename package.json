@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tiny utility wrapper to add Axios functionality to Fetch",
   "scripts": {
-    "lint": "eslint lib",
+    "lint": "eslint .",
     "test": "mocha"
   },
   "keywords": [
