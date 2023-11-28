@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import faxios, {defaults, getFetchRequest} from '#lib/faxios';
+import {defaults, getFetchRequest} from '#lib/faxios';
 
 describe('AxiosRequest translation', ()=> {
 
