@@ -6,6 +6,8 @@ describe('AxiosRequest translation', ()=> {
 	it('translate basic config structures', ()=> {
 		let data;
 
+		expect(()=> getFetchRequest({})).to.throw;
+
 		expect(getFetchRequest({
 			url: 'https://google.com',
 		})).to.deep.equal([
