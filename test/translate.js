@@ -11,7 +11,7 @@ describe('AxiosRequest translation', ()=> {
 		expect(getFetchRequest({
 			url: 'https://google.com',
 		})).to.deep.equal([
-			'https://google.com',
+			'https://google.com/',
 			{
 				method: 'GET',
 				headers: defaults.headers.common,
@@ -22,7 +22,7 @@ describe('AxiosRequest translation', ()=> {
 			method: 'POST',
 			url: 'https://google.com',
 		})).to.deep.equal([
-			'https://google.com',
+			'https://google.com/',
 			{
 				method: 'POST',
 				headers: defaults.headers.common,
@@ -36,13 +36,13 @@ describe('AxiosRequest translation', ()=> {
 		};
 		expect(getFetchRequest({
 			method: 'POST',
-			url: 'https://google.com',
+			url: 'https://google.com/',
 			data,
 			headers: {
 				Authentication: 'Bearer abcdef',
 			},
 		})).to.deep.equal([
-			'https://google.com',
+			'https://google.com/',
 			{
 				method: 'POST',
 				body: JSON.stringify(data),
