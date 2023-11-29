@@ -38,6 +38,30 @@ describe('Server comms', ()=> {
 			})
 	);
 
+	it('request with onConfig callback', ()=>
+		new Promise((resolve, reject) =>
+			faxios.post('/basic/200', {
+				foo: 1,
+				bar: 2,
+				baz: 3,
+			}, {
+				onConfig(fUrl, fConfig) {
+					resolve({fUrl, fConfig});
+				},
+			})
+		)
+			.then(({fUrl, fConfig}) => {
+				expect(fUrl).to.be.equal('http://localhost:8181/basic/200');
+				expect(fConfig).to.deep.equal({
+					method: 'POST',
+					headers: {
+						"Content-Type": "application/json;charset=UTF-8",
+					},
+					body: "{\"foo\":1,\"bar\":2,\"baz\":3}",
+				});
+			})
+	);
+
 	it('JSON responses', ()=>
 		faxios.get('/basic/json')
 			.then(({data, status}) => {
