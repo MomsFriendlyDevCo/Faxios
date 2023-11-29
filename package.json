@@ -1,6 +1,6 @@
 {
   "name": "@momsfriendlydevco/faxios",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tiny utility wrapper to add Axios functionality to Fetch",
   "scripts": {
     "lint": "eslint .",
