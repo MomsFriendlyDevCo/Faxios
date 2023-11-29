@@ -9,6 +9,7 @@ Tiny utility wrapper to add Axios functionality to Fetch.
 * **Simple default injection** - As with Axios, its simple to extend the `defaults` object to include common headers or data entities that should always be used
 * **Error detection + warning (dev mode only)** - Faxios will yell at you nicely if you try to use a feature that you should probably use a full library for like parameter serialization, proxies or agent overrides
 * **Intercept / tap into pre-fetch callbacks** - See the value of the final Fetch URL + FetchConfig while logging - see `onConfig()`
+* **Fully compatible with Cloudflare workers** - ... and all its weird not-quite-JavaScript runtime API
 
 
 ```javascript
