@@ -23,6 +23,9 @@ describe('Server comms', ()=> {
 				baz: [1, null, '3'],
 			})
 		);
+		app.get('/basic/html', (req, res) =>
+			res.send('<strong>Hello World</strong>')
+		);
 
 		server = app.listen(port, null, finish);
 	});
@@ -71,6 +74,15 @@ describe('Server comms', ()=> {
 					bar: 'bar!',
 					baz: [1, null, '3'],
 				});
+			})
+	);
+
+	it('HTML proxying', ()=>
+		faxios.get('/basic/html')
+			.then(({data, status, text}) => {
+				expect(status).to.equal(200);
+				expect(data).to.deep.equal('<strong>Hello World</strong>');
+				expect(text).to.deep.equal('<strong>Hello World</strong>');
 			})
 	);
 
