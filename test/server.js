@@ -86,4 +86,10 @@ describe('Server comms', ()=> {
 			})
 	);
 
+	it('should have the defaults object exposed', ()=> {
+		expect(faxios.defaults).to.be.an('object');
+		expect(faxios.defaults).to.have.property('baseURL');
+		expect(faxios.defaults).to.have.nested.property('headers.common.Content-Type', 'application/json;charset=UTF-8');
+	});
+
 });
